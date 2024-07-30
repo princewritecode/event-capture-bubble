@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubble and capture </title>
+    <!-- <style>
+        body * {
+            margin: 10px;
+            border: 1px solid rgb(0, 129, 80);
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- <div class="one" onclick="handler()">
+        <div class="two">
+            <div class="three-a">
+                <button id="button-1">Click button1</button>
+            </div>
+            <div class="three-a">
+                <button id="button-2">click button 2</button>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div onclick="alert('outer-div')">
+        <div onclick="alert('inner-div')">
+            <p onclick="alert('p element clicked')">If you click on this <em>p</em> the event handler on the parent will
+                run</p>
+        </div>
+    </div> -->
+    <!-- <div id="one">
+        <div id="two">
+            <div id="three-a">
+                <button id="button-1">Button One</button>
+            </div>
+            <div id="three-b">
+                <button id="button-2">Button Two</button>
+            </div >
+        </div>
+    </div> -->
+
+
+    <button id="button-1">button one</button>
+    <button id="button-2">button two</button>
+
+    <script>
+        const button = document.getElementById('button-1');
+        button.addEventListener('click', clickhandler, true);
+        button.addEventListener('click', clickhandler, false);
+        function clickhandler()
+        {
+            console.log('click handler is being clicked');
+        }
+    </script>
+
+</body>
+
+
+
+</html>
